@@ -11,10 +11,6 @@
             cluster: "DC_1"
             });
         </script>
-
-        <script src="https://sdk-01.moengage.com/"></script>
-        <script src="https://sdk-02.moengage.com/"></script>
-        <script src="https://sdk-03.moengage.com/"></script>
         <h1> Test Form</h1> 
     </head> 
 <body> 
@@ -25,12 +21,12 @@
             <tr> <td> Email: </td> <td> <input type="text" id="email" name="email"> </td> </tr> 
             <tr> <td> Phone: </td> <td> <input type="text" id="phone" name="phone"> </td> </tr>
             <tr> <td> Age: </td> <td> <input type="text" id="age" name="age"> </td> </tr>
-            <tr> <td> <input type="submit" id ="submitbutton" value="Submit"> </td></tr>
+            <tr> <td> <input type="submit" id ="submitbutton" value="Submit" class="button"> </td></tr>
         </table> 
     </form> 
 
     <script>
-        const btn = document.getElementById("submitbutton");
+        const btn = document.querySelector(".button");
         btn.addEventListener("click", function() {
             Moengage.add_first_name(document.getElementById("firstname").value);
             Moengage.add_last_name(document.getElementById("lastname").value);
