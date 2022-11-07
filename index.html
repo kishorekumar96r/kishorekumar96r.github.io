@@ -12,7 +12,7 @@
         </script>
         <h1> Test Form</h1> 
     </head> 
-<body> 
+    <body> 
         <table> 
             <tr> <td> First Name: </td> <td> <input type="text" id ="firstname" name="firstname"> </td> </tr>
             <tr> <td> Last Name: </td> <td> <input type="text" id= "lastname" name="lastname"> </td> </tr>
@@ -22,17 +22,17 @@
             <tr> <td> <input type="submit" id ="submitbutton" value="Submit" class="button"> </td></tr>
         </table> 
 
-    <script>
-        const btn = document.querySelector(".button");
-        btn.addEventListener("click", function() {
-            Moengage.add_first_name(document.getElementById("firstname").value);
-            Moengage.add_last_name(document.getElementById("lastname").value);
-            Moengage.add_email(document.getElementById("email").value);
-            Moengage.add_mobile(document.getElementById("phone").value);
-            //Moengage.add_age(document.getElementById("age").value);
-            Moengage.add_unique_user_id(document.getElementById("email").value);
-            Moengage.add_user_attribute("age", document.getElementById("age").value);
-        });
-    </script>
-</body> 
+        <script>
+            const btn = document.getElementById("submitbutton");
+            btn.addEventListener("click", function() {
+                Moengage.add_first_name(document.getElementById("firstname").value);
+                Moengage.add_last_name(document.getElementById("lastname").value);
+                Moengage.add_email(document.getElementById("email").value);
+                Moengage.add_mobile(document.getElementById("phone").value);
+                //Moengage.add_age(document.getElementById("age").value);
+                Moengage.add_unique_user_id(document.getElementById("email").value);
+                Moengage.add_user_attribute("age", document.getElementById("age").value);
+            });
+        </script>
+    </body> 
 </html>
