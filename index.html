@@ -78,27 +78,36 @@
     </table>
 
   <script>
-    const bttn = document.querySelector(".butt");
-    bttn.addEventListener("click", function() {
-    Moengage.add_first_name(document.getElementById("firstname").value);
-    Moengage.add_last_name(document.getElementById("lastname").value);
-    Moengage.add_email(document.getElementById("email").value);
-    Moengage.add_mobile(document.getElementById("phone").value);
-    //Moengage.add_age(document.getElementById("age").value);
-    Moengage.add_unique_user_id(document.getElementById("email").value);
-    Moengage.add_user_attribute("age", document.getElementById("age").value);
-    });
+    // const bttn = document.querySelector(".butt");
+    // bttn.addEventListener("click", function() {
+    // Moengage.add_first_name(document.getElementById("firstname").value);
+    // Moengage.add_last_name(document.getElementById("lastname").value);
+    // Moengage.add_email(document.getElementById("email").value);
+    // Moengage.add_mobile(document.getElementById("phone").value);
+    // //Moengage.add_age(document.getElementById("age").value);
+    // Moengage.add_unique_user_id(document.getElementById("email").value);
+    // Moengage.add_user_attribute("age", document.getElementById("age").value);
+    // });
 
-    //       const btn = document.getElementById("submitbutton");
-    //       btn.addEventListener("click", function() {
-    //           Moengage.add_first_name(document.getElementById("firstname").value);
-    //           Moengage.add_last_name(document.getElementById("lastname").value);
-    //           Moengage.add_email(document.getElementById("email").value);
-    //           Moengage.add_mobile(document.getElementById("phone").value);
-    //           //Moengage.add_age(document.getElementById("age").value);
-    //           Moengage.add_unique_user_id(document.getElementById("email").value);
-    //           Moengage.add_user_attribute("age", document.getElementById("age").value);
-//    });
+          const btn = document.getElementById("submitbutton");
+          btn.addEventListener("click", function() {
+              Moengage.add_first_name(document.getElementById("firstname").value);
+              Moengage.add_last_name(document.getElementById("lastname").value);
+              Moengage.add_email(document.getElementById("email").value);
+              Moengage.add_mobile(document.getElementById("phone").value);
+              //Moengage.add_age(document.getElementById("age").value);
+              Moengage.add_unique_user_id(document.getElementById("email").value);
+              Moengage.add_user_attribute("age", document.getElementById("age").value);
+   });
+
+            Moengage.track_event("EVENT_NAME_1"); // This event has no attributes
+            // Track events with additional attributes
+            Moengage.track_event("EVENT_NAME_2", {
+            "attribute_1": "value_1", // string value
+            "attribute_2": 2, // numeric value
+            "attribute_3": 3.4, // numeric value
+            "attribute_4": new Date(2017, 0, 31), // datetime value. Example value represents 31 January, 2017.
+            });
   </script>
 </body>
 
