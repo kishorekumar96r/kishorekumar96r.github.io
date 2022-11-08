@@ -8,7 +8,7 @@
             Moengage = moe({
             app_id:"MMU71257AE4DRIPBS0XWKQM9",
             debug_logs: 1,
-            swPath: "/serviceworker.js"
+            swPath: "serviceworker.js"
             });
         </script>
 
@@ -34,12 +34,6 @@
                 //Moengage.add_age(document.getElementById("age").value);
                 Moengage.add_unique_user_id(document.getElementById("email").value);
                 Moengage.add_user_attribute("age", document.getElementById("age").value);
-            });
-
-            Moengage.track_event("Flight Bookoed", {
-                "departure_date":"2019-05-21T03:47:35Z",
-                "price": 3999,
-                "premium_seat": true
             });
         </script>
     </body> 
